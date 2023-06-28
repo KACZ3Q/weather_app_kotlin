@@ -1,0 +1,242 @@
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:padding="25dp"
+    tools:context=".MainActivity"
+    android:id="@+id/mainLayout"
+    android:background="@drawable/mainbg">
+
+    <TableLayout
+        android:id="@+id/table"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+
+        android:background="@drawable/frame"
+
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <TableRow>
+
+            <EditText
+                android:id="@+id/editTextCity"
+
+                android:layout_height="match_parent"
+                android:layout_width="300dp"
+
+                android:autofillHints=""
+                android:hint="@string/select_city"
+                android:inputType="text"
+
+                android:background="@null"
+                android:backgroundTint="@null"
+
+                android:textAlignment="center"
+                android:textColor="#D8FFFFFF"
+                android:textColorHint="@color/white"
+                android:textColorHighlight="@color/white"
+                android:textStyle="bold"
+                android:textSize="20sp"
+
+                app:layout_constraintEnd_toStartOf="@id/imageButtonSearch"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <ImageButton
+                android:id="@+id/imageButtonSearch"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_margin="1dp"
+                android:background="@drawable/rounded_button"
+
+                android:contentDescription="@string/search_button"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+        </TableRow>
+    </TableLayout>
+
+    <TableLayout
+        android:id="@+id/mainTemp"
+        android:layout_width="350dp"
+        android:layout_height="wrap_content"
+
+        android:layout_marginTop="20dp"
+        android:background="@drawable/frame"
+
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/table"
+        >
+        <TableRow android:gravity="center">
+            <TextView
+                android:id="@+id/textViewLocation"
+
+                android:layout_marginTop="10dp"
+                android:textColor="#D8FFFFFF"
+                android:textSize="44sp"
+
+                android:textAlignment="center"
+                android:textStyle="bold" />
+        </TableRow>
+        <TableRow android:gravity="center">
+            <TextView
+                android:id="@+id/textViewTemperature"
+
+                android:textColor="#D8FFFFFF"
+                android:textSize="100sp"
+
+                android:textAlignment="center"
+
+                android:textStyle="bold" />
+        </TableRow>
+        <TableRow android:gravity="center">
+            <TextView
+                android:id="@+id/textViewDescription"
+
+                android:layout_marginBottom="10dp"
+
+                android:textSize="44sp"
+                android:textStyle="bold"
+                android:textColor="#D8FFFFFF"
+
+                android:textAlignment="center" />
+        </TableRow>
+    </TableLayout>
+
+    <TableLayout
+        android:id="@+id/tableTemp"
+        android:layout_width="350dp"
+        android:layout_height="55dp"
+        android:gravity="center"
+
+        android:background="@drawable/frame"
+
+        android:layout_margin="20dp"
+        android:padding="10dp"
+
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/mainTemp">
+        <TableRow
+            android:gravity="center"
+            tools:ignore="UselessParent">
+            <TextView
+                android:id="@+id/textViewTempMin"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="1dp"
+
+
+                android:text="@string/l"
+                android:textSize="22sp"
+                android:textStyle="bold"
+                android:textColor="#D8FFFFFF"
+
+                />
+
+                <TextView
+                    android:id="@+id/minTemp"
+                    android:layout_height="wrap_content"
+                    android:layout_width="wrap_content"
+
+                    android:padding="1dp"
+                    android:layout_marginEnd="4dp"
+
+                    android:textSize="22sp"
+
+                    android:textColor="#D8FFFFFF">
+                </TextView>
+
+            <TextView
+                android:id="@+id/textViewTempMax"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+
+                android:paddingTop="1dp"
+                android:paddingBottom="1dp"
+
+                android:text="@string/h"
+                android:textSize="22sp"
+                android:textStyle="bold"
+                android:textColor="#D8FFFFFF" />
+                <TextView
+                    android:id="@+id/maxTemp"
+                    android:layout_height="wrap_content"
+                    android:layout_width="wrap_content"
+                    android:padding="1dp"
+
+                    android:textSize="22sp"
+                    android:textColor="#D8FFFFFF">
+                </TextView>
+        </TableRow>
+    </TableLayout>
+
+<TableLayout
+    android:id="@+id/tableDetails"
+    android:layout_width="350dp"
+    android:layout_height="85dp"
+    android:gravity="center"
+
+    android:layout_margin="20dp"
+    android:padding="10dp"
+
+    android:background="@drawable/frame"
+
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintTop_toBottomOf="@id/tableTemp">
+    <TableRow>
+        <TextView
+            android:layout_marginEnd="25dp"
+
+            android:text="@string/humidity"
+            android:textSize="22sp"
+            android:textStyle="bold"
+            android:textColor="#D8FFFFFF"/>
+        <TextView
+            android:layout_marginEnd="25dp"
+
+            android:text="@string/pressure"
+            android:textSize="22sp"
+            android:textStyle="bold"
+            android:textColor="#D8FFFFFF"/>
+        <TextView
+            android:text="@string/feels_like"
+            android:textSize="22sp"
+            android:textStyle="bold"
+            android:textColor="#D8FFFFFF"/>
+    </TableRow>
+    <TableRow>
+        <TextView
+            android:id="@+id/textViewHumidity"
+
+            android:layout_marginEnd="25dp"
+            android:textSize="22sp"
+            android:textAlignment="center"
+            android:textColor="#D8FFFFFF"/>
+        <TextView
+            android:id="@+id/textViewPressure"
+
+            android:layout_marginEnd="25dp"
+            android:textSize="22sp"
+            android:textAlignment="center"
+            android:textColor="#D8FFFFFF"/>
+        <TextView
+            android:id="@+id/textViewFeel"
+            android:textSize="22sp"
+            android:textAlignment="center"
+            android:textColor="#D8FFFFFF"/>
+    </TableRow>
+</TableLayout>
+
+
+
+
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+

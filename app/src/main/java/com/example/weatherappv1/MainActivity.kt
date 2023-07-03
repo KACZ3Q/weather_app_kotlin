@@ -76,6 +76,7 @@ class MainActivity : AppCompatActivity() {
                         "Thunderstorm" -> mainLayout.setBackgroundResource(R.drawable.storm)
                         "Haze" -> mainLayout.setBackgroundResource(R.drawable.haze)
                         "Mist" -> mainLayout.setBackgroundResource(R.drawable.haze)
+                        "Fog" -> mainLayout.setBackgroundResource(R.drawable.haze)
                     }
 
                     textViewTemperature.text = "$temperature°C"
